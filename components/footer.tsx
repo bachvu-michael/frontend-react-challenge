@@ -1,16 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image'
-import logoPic from '../public/images/logo-white.svg'
-import twitterPic from '../public/images/footer-twitter.svg'
-import facebookPic from '../public/images/footer-facebook.svg'
-import linkedinPic from '../public/images/footer-linkedin.svg'
-import iabLogo from '../public/images/logo-iab.png'
-import noraLogo from '../public/images/logo-nora.png'
-
-
-
+import logoPic from '../static/images/logo-white.svg'
+import twitterPic from '../static/images/footer-twitter.svg'
+import facebookPic from '../static/images/footer-facebook.svg'
+import linkedinPic from '../static/images/footer-linkedin.svg'
+import iabLogo from '../static/images/logo-iab.png'
+import noraLogo from '../static/images/logo-nora.png'
+import { columnAbout, columnExtra, columnLearnMore, columnSupport } from '../interfaces/enum'
 
 export default function Footer() {
+
   return (
     <footer className="site-footer">
       <div className="container">
@@ -37,37 +36,41 @@ export default function Footer() {
               <div className="col-xs-6 col-sm-3">
                 <h4>Learn More</h4>
                 <ul>
-                  <li><a href="#">Affiliate Tour</a></li>
-                  <li><a href="#">Advertiser Tour</a></li>
-                  <li><a href="#">Agency Tour</a></li>
-                  <li><a href="#">{`FAQ's`}</a></li>
-                  <li><a href="#">Glossary</a></li>
+                  {
+                    columnLearnMore.map((e, i) => {
+                      return <li key={`footer-learn-more-${i}`}><a href={e.url}>{e.title}</a></li>
+                    })
+                  }
                 </ul>
               </div>
               <div className="col-xs-6 col-sm-3">
                 <h4>About</h4>
                 <ul>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Advertiser Directory</a></li>
-                  <li><a href="#">What Is Affiliate Marketing?</a></li>
+                  {
+                    columnAbout.map((e, i) => {
+                      return <li key={`footer-about-${i}`}><a href={e.url}>{e.title}</a></li>
+                    })
+                  }
                 </ul>
               </div>
               <div className="col-xs-6 col-sm-3">
                 <h4>Support</h4>
                 <ul>
-                  <li><a href="#">Help</a></li>
-                  <li><a href="#">Terms of Use</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">API</a></li>
+                  {
+                    columnSupport.map((e, i) => {
+                      return <li key={`footer-support-${i}`}><a href={e.url}>{e.title}</a></li>
+                    })
+                  }
                 </ul>
               </div>
               <div className="col-xs-6 col-sm-3">
                 <h4>Extra</h4>
                 <ul>
-                  <li><a href="#">iPhone App</a></li>
-                  <li><a href="#">Android App</a></li>
-                  <li><a href="#">Careers</a></li>
-                  <li><a href="#">Blog</a></li>
+                  {
+                    columnExtra.map((e, i) => {
+                      return <li key={`footer-extra-${i}`}><a href={e.url}>{e.title}</a></li>
+                    })
+                  }
                 </ul>
               </div>
             </div>

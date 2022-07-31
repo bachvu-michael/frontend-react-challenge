@@ -8,10 +8,13 @@ class MyDocument extends Document {
 
     return initialProps
   }
+  //render default value
   render() {
     return (
       <Html>
-        <Head />
+        <Head >
+          <link rel="shortcut icon" href="/static/favicon.ico" />
+        </Head>
         <body className="directory">
           <Main />
           <NextScript />
