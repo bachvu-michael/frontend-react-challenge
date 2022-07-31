@@ -3,7 +3,6 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ReactElement, ReactNode, useState, useEffect } from 'react'
 import { NextPage } from 'next'
-import useWindowDimensions from '../services/useWindowDimensions'
 
 export type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode

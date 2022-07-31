@@ -3,7 +3,6 @@ import Head from 'next/head'
 import useSwr from 'swr'
 import ErrorPage from 'next/error'
 import Link from 'next/link'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
 import LayoutDetail from '../../components/layoutDetail'
 import { ReactElement, useEffect, useState } from 'react'
 import { fetcher } from '../../services/fetcher'
@@ -81,7 +80,7 @@ const AdvertiserDetail: NextPageWithLayout = (props) => {
                   listAdvertiseRef && listAdvertiseRef.length !== 0 && listAdvertiseRef.map((e, i) => {
                     return <div className="table-row" key={`list-ref-${i}`}>
                       <div className="table-col logo">
-                        <img src={e.avatarUrl} alt={e.campaignName} />
+                        <img src={e.avatarUrl.toString()} alt={e.campaignName.toString()} />
                       </div>
                       <div className="table-col">
                         <p className="small">

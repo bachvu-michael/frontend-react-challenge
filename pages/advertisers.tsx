@@ -178,7 +178,7 @@ const Advertisers: NextPageWithLayout = () => {
                     dataFilter && dataFilter.length ? dataFilter.slice(page * paginationSize, (page * paginationSize) + paginationSize).map((e: Advertiser, i: Number) => {
                       return <div key={`list-advertiser-${i}`} className="table-row">
                         <div className="table-col logo">
-                          <img src={e.avatarUrl} alt={e.campaignName} />
+                          <img src={e.avatarUrl.toString()} alt={e.campaignName.toString()} />
                         </div>
                         <div className="table-col">
                           <p className="bold"><a href={`/advertisers/${e.id}`}>{e.campaignName}</a></p>
