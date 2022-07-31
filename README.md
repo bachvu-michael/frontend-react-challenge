@@ -1,34 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to Michael's homework
 
-## Getting Started
+## Getting Started (start local)
 
-First, run the development server:
-
+To run this site locally, you need to prepare node v16.16.0 or higher version
 ```bash
-npm run dev
-# or
-yarn dev
+node v16.16.0
 ```
-
+Go to project folder and open terminal
+```bash
+npm install
+# 
+npm run build
+#
+npm start
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+[http://localhost:3000/advertisers](http://localhost:3000/advertisers)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+[http://localhost:3000/advertisers/10001](http://localhost:3000/advertisers/10001)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Live check
+I already deploy project to server, so if you don't want to start local, you can check the site at [https://frontend-react-challenge-sable.vercel.app/](https://frontend-react-challenge-sable.vercel.app/)
+## Introduce about the structure of code
+```bash
+├── components (component folder)
+├── interfaces (type and enum)
+├── mockup-data (json data)
+├── pages
+│   ├── api (fake API)
+│   ├── advertisers
+│   │   ├── [slug].tsx (advertiser page detail)
+│   ├── _app.tsx
+│   ├── _document.tsx
+│   ├── advertisers.tsx (advertisers page list)
+│   ├── index.tsx (page home)
+├── public (assets public folder)
+├── services (provide service and utility function)
+├── static (assets folder)
+└── styles (style folder)
+```
+## Introduce about feature in homework
+- I had build search and sort by name in [/advertisers](https://frontend-react-challenge-sable.vercel.app/advertisers) page.
+- I add pagination to the list Affiliate Programs (but I think the better way is work with BE to pagination).
+- I develop the detail advertiser page and list of referent advertiser.
+- I design to 2 layout, one for list page and another for detail page, component the HTML code, dynamic parameter.
 
-## Learn More
+## Tech use in the project
+- React: [next js](https://nextjs.org/) 
+- Mockup API [link](https://nextjs.org/docs/api-routes/introduction)
+- Typescript
+- Deploy by [vercel](https://vercel.com/)
+## Link project
 
-To learn more about Next.js, take a look at the following resources:
+[https://github.com/bachvu-michael/frontend-react-challenge](https://github.com/bachvu-michael/frontend-react-challenge)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## ***
+Thank you for spend your time to this homework, I look forward to receiving feedback from you and hope we can have more conversation.
